@@ -1,0 +1,177 @@
+try {
+            int opc;
+            do {
+                mostrarMenu();
+                opc = leer.nextInt();
+                switch (opc) {
+                    case 1:
+                        System.out.println(" Ingrese el nombre del Autor : ");
+                        String nombreAutor = leer.next();
+                        as.crearAutor(nombreAutor);
+                        break;
+                    case 2:
+                        System.out.println(" Ingrese el nombre del Editorial : ");
+                        String nombreEditorial = leer.next();
+                        es.crearEditorial(nombreEditorial);
+                        break;
+                    case 3:
+                        System.out.println(" Ingrese el nombre del Libro : ");
+                        String nombreLibro = leer.next();
+                        System.out.println(" Ingrese el nombre del Autor : ");
+                        String nombreAutor2 = leer.next();
+                        System.out.println(" Ingrese el nombre del Editorial : ");
+                        String nombreEditorial2 = leer.next();
+                        System.out.println(" Ingrese el Año : ");
+                        int anio = leer.nextInt();
+                        System.out.println(" Ingrese Cantidad Ejemplares : ");
+                        int ejm = leer.nextInt();
+                        ls.crearLibro(nombreLibro, anio, ejm, as.crearAutor(nombreAutor2), es.crearEditorial(nombreEditorial2));
+                        break;
+                    case 4:
+                        System.out.println(" Ingrese el ID de Autor");
+                        Integer id = leer.nextInt();
+                        System.out.println(" Ingrese el NUEVO nombre del Autor : ");
+                        String nombreAutor3 = leer.next();
+                        as.editarAutor(id, nombreAutor3);
+                        break;
+                    case 5:
+                        System.out.println(" Ingrese el ID de Editorial");
+                        Integer id2 = leer.nextInt();
+                        System.out.println(" Ingrese el NUEVO nombre del Editorial : ");
+                        String nombreAutor4 = leer.next();
+                        as.editarAutor(id2, nombreAutor4);
+                        break;
+                    case 6:
+                        System.out.println(" Ingrese el ID del Libro");
+                        Long id3 = leer.nextLong();
+                        System.out.println(" Ingrese el nombre del Libro : ");
+                        String nombreLibro2 = leer.next();
+                        System.out.println(" Ingrese el nombre del Autor : ");
+                        String nombreAutor5 = leer.next();
+                        System.out.println(" Ingrese el nombre del Editorial : ");
+                        String nombreEditorial5 = leer.next();
+                        System.out.println(" Ingrese el Año : ");
+                        int anio2 = leer.nextInt();
+                        System.out.println(" Ingrese Cantidad Ejemplares : ");
+                        int ejm2 = leer.nextInt();
+                        ls.editarLibro(id3, nombreLibro2, anio2, ejm2, as.crearAutor(nombreAutor5), es.crearEditorial(nombreEditorial5));
+                        break;
+                    case 7:
+                        System.out.println(" Que desea dar de alta ? LIBRO/EDITORIAL/AUTOR ");
+                        String resp2 = leer.next().toUpperCase();
+                        System.out.println("Ingrese el ID : ");
+                        int idas = leer.nextInt();
+                        if (resp2.equalsIgnoreCase("LIBRO")) {
+
+                            as.darDeAltaAutor(idas);
+                        }
+                        if (resp2.equalsIgnoreCase("EDITORIAL")) {
+
+                            es.darDeAltaEditorial(idas);
+                        }
+                        if (resp2.equalsIgnoreCase("AUTOR")) {
+                            ls.darDeAltaLibro(idas);
+                        }
+                        break;
+                    case 8:
+                        System.out.println(" Que desea dar de baja ? LIBRO/EDITORIAL/AUTOR ");
+                        String resp = leer.next().toUpperCase();
+                        if (resp.equalsIgnoreCase("AUTOR")) {
+                            System.out.println("Ingrese el ID : ");
+                            int idas2 = leer.nextInt();
+                            as.darDeBajaAutor(idas2);
+                        }
+                        if (resp.equalsIgnoreCase("EDITORIAL")) {
+                            System.out.println("Ingrese el ID : ");
+                            int idas2 = leer.nextInt();
+                            es.darDeBajaEditorial(idas2);
+                        }
+                        if (resp.equalsIgnoreCase("LIBRO")) {
+                            System.out.println("Ingrese el ID : ");
+                            int idas2 = leer.nextInt();
+                            ls.darDeBajaLibro(idas2);
+                        }
+                        break;
+                    case 9:
+                        System.out.println("Ingrese el nombre del Autor : ");
+                        String nombreAuto = leer.next();
+                        as.buscarAutor(nombreAuto);
+                        break;
+                    case 10:
+                        String var;
+                        do {
+                            mostrarMenuBuscar();
+                            var = leer.next();
+                            switch (var) {
+                                case "a":
+                                    System.out.println("Ingrese el ID : ");
+                                    int IdBuscar = leer.nextInt();
+                                    ls.buscarLibroPorId(IdBuscar);
+                                    break;
+                                case "b":
+                                    System.out.println("Ingrese el nombre : ");
+                                    String nombreBuscar = leer.next();
+                                    ls.buscarLibroPorNombre(nombreBuscar);
+                                    break;
+                                case "c":
+                                    System.out.println("Ingrese el nombre : ");
+                                    String nombreBuscar1 = leer.next();
+                                    ls.buscarLibroPorNombreAutor(nombreBuscar1);
+                                    break;
+                                case "d":
+                                    System.out.println("Ingrese el nombre : ");
+                                    String nombreBuscar2 = leer.next();
+                                    ls.buscarLibroPorNombreEditorial(nombreBuscar2);
+                                    break;
+                                case "f":
+                                    System.out.println(" Saliendo de Buscar Autor \n");
+                                    break;
+                                default:
+                                    System.out.println("Ingreso mal la opcion");
+                                    var = leer.next();
+                            }
+                        } while (!"f".equals(var));
+                    case 0:
+
+                        break;
+                    default:
+                        System.out.println(" Ingreso mal la OPCION vuelva a ingresar :");
+                        opc = leer.nextInt();
+                }
+            } while (opc != 0);
+
+        } catch (Exception e) {
+            System.out.println("ERROR 404");
+            System.out.println(e);
+        }
+
+    }
+
+    public static void mostrarMenuBuscar() {
+        System.out.println("\n Ingrese la OPCION de Busqueda : "
+                + "\n a) Por ID "
+                + "\n b) Por Nombre "
+                + "\n c) Por Nombre de Autor "
+                + "\n d) Por Nombre de Editorial"
+                + "\n f) Salir ");
+    }
+
+    public static void mostrarMenu() {
+
+        System.out.println("\n ---- MENU ----");
+        System.out.println("\n 1 - Crear Autor "
+                + "\n 2 - Crear Editorial "
+                + "\n 3 - Crear Libro "
+                + "\n 4 - Editar Autor "
+                + "\n 5 - Editar Editorial "
+                + "\n 6 - Editar Libro "
+                + "\n 7 - Dar de Baja "
+                + "\n 8 - Dar de Alta "
+                + "\n 9 - Buscar Autor "
+                + "\n 10 - Buscar Libro "
+                + "\n 11 - Eliminar Autor/Libro/Editorial"
+                + "\n 0 - Salir "
+                + "\n Ingrese la OPCION : ");
+    }
+    
+}

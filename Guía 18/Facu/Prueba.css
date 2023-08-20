@@ -1,0 +1,19 @@
+body{background-color: orange;}
+h1{
+    text-align: left;
+    color: rgb(0, 0, 0);
+    background-color: orange;
+}
+
+div{
+    text-align: center;
+    color: blanchedalmond;
+    background-color: orange;
+}
+p{background-color: orange;
+    color:black
+}
+label{background-color: orange;
+    color: black;}
+input{background-color: orange;
+    color: black;}
