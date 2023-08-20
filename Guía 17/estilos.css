@@ -1,0 +1,36 @@
+body {
+  background-color: grey;
+  font-family: verdana;
+  color: black;
+}
+
+h1 {
+  font-size: 24pt; /* Cambiado a 36 píxeles, ajusta según tus necesidades */
+  font-family: verdana, arial;
+  text-align: center;
+}
+
+h2 {
+  font-size: 16pt;
+  font-family: verdana, arial;
+  text-align: center;
+}
+p {
+  font-size: 16px; /* Cambiado a 16 píxeles, ajusta según tus necesidades */
+  font-family: arial, helvetica;
+  color: yellow;
+  text-align: left;
+}
+/*Ejercicio 8*/
+a:link{
+    color: #CC0000;
+}
+
+a:hover{
+    background-color: #CC0000;
+    color: #FFF;
+}
+
+a:visited{
+    color: #CCC;
+}

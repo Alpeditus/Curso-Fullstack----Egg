@@ -1,0 +1,15 @@
+h1{
+    color: darkgreen;
+}
+
+p strong{
+    color: red;
+}
+
+h2{
+    color: blue;
+}
+
+.ultimoParrafo{
+    color: rgba(116, 161, 48, 0.458);
+}

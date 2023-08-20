@@ -1,0 +1,27 @@
+body {
+    background-color: #b5e4b3; /* Color de fondo a elección */
+    font-family: "Arial", sans-serif; /* Fuente a elección para los párrafos */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+header {
+    text-align: center; /* Alineación centrada para el encabezado */
+}
+
+h1, h2 {
+    font-family: "Georgia", serif; /* Fuente a elección para H1 y H2 */
+    color: #0066cc; /* Color del texto a elección */
+}
+
+p {
+    color: #24169c; /* Color del texto a elección */
+    text-align: justify; /* Alineación justificada para los párrafos */
+}
+/* Posicionar la lista de países a la izquierda */
+.country-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+  
