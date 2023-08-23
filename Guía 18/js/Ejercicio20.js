@@ -2,6 +2,11 @@
 muestre el siguiente array [6, 9, 12, 15, 18]. */
 
 let matriz = [[3], [6], [9], [12], [15]];
-console.log(matriz);
+
 let vector = matriz.flat();
-console.log(vector);
+
+for(let i=0; i<vector.length;i++){
+    vector[i]+=3;
+}
+
+console.log(` La matriz es igual a ${matriz} y el vector a ${vector}`);

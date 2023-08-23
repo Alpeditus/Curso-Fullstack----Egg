@@ -7,10 +7,10 @@ let persona = {
     edad : 34,
     sexo : 'H',
     peso : 90,
-    altura : 1.70,
+    altura : 1.70
 };
 
-let arrayPersona = Object.keys(persona); // Crea un array de las propiedades de un objeto.
+let arrayPersona = Object.values(persona); // Crea un array de las propiedades de un objeto.
 
 alert(arrayPersona);
 console.log(arrayPersona);

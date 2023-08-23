@@ -9,13 +9,16 @@ de 20. */
 let arregloA = [];
 let arregloB = [];
 
-for (let i=0; i<arregloA.length; i++){
-    arregloA[i] = Math.random()*10
-};
+for (let i = 0; i < 50; i++) {
+  arregloA[i] = Math.random() * 50 + 1;
+  //arregloA[i].toFixed(3);
+}
 
-alert(arregloA);
+arregloA.sort((a, b) => a - b);
+
+for (let i = 0; i < 20; i++) {
+  i < 10 ? arregloB[i] = arregloA[i] : (arregloB[i] = 0.5);
+}
+
 console.log(arregloA);
-
-arregloA.sort();
-console.log(arregloA);
-
+console.log(arregloB);
