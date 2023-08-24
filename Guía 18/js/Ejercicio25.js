@@ -43,6 +43,9 @@ function getFormValores() {
     // Imprimir los valores en la consola (puedes ajustar esto según tus necesidades)
     console.log('Nombre:', nombre);
     console.log('Apellido:', apellido);
+    document.getElementById("respuesta").innerHTML = 
+    `Nombre ingresado: ${nombre}.<br>
+    Apellido ingresado: ${apellido}.`
   
     // Evitar que el formulario se envíe realmente
     return false;
