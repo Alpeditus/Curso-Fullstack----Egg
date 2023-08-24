@@ -10,15 +10,19 @@ let arregloA = [];
 let arregloB = [];
 
 for (let i = 0; i < 50; i++) {
-  arregloA[i] = Math.random() * 50 + 1;
-  //arregloA[i].toFixed(3);
+  arregloA[i] = (Math.random() * 50 + 1).toFixed(2);
+  //arregloA.push = otra forma de agregar valores a
 }
 
 arregloA.sort((a, b) => a - b);
 
 for (let i = 0; i < 20; i++) {
-  i < 10 ? arregloB[i] = arregloA[i] : (arregloB[i] = 0.5);
+  i < 10 ? (arregloB[i] = arregloA[i]) : (arregloB[i] = 0.5);
+  
 }
 
 console.log(arregloA);
 console.log(arregloB);
+
+let respuesta = document.getElementById("respuesta");
+respuesta.innerHTML = `El arreglo A es igual: ${arregloA}<br>Y el arreglo B es igual a: ${arregloB}`;

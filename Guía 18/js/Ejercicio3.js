@@ -13,3 +13,4 @@ function mostrarMensaje() {
     mensajeDiv.textContent = "Ud es mayor de edad.";
   }
 }
+
