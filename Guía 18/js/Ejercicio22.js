@@ -6,4 +6,5 @@ let boton = document.getElementById("boton");
 boton.onclick = function clickMensaje(){
     console.log('Atrevido.');
     alert('Atrevido.');
+    document.getElementById("respuesta").textContent = "Atrevido."
 };
