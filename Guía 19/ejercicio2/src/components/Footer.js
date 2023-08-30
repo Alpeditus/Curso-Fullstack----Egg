@@ -1,7 +1,5 @@
 import React from "react";
 
-/*rafc - crea un react functional component (función flecha).
-Footer.js es un functional component.*/
 export const Footer = () => {
   return (
     <div class="container">

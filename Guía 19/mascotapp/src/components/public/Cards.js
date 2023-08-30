@@ -2,10 +2,10 @@ import React from "react";
 
 export const Cards = () => {
   return (
-    <div className="album py-5 bg-body-tertiary">
-      <div className="container">
+    <div class="album py-5 bg-body-tertiary">
+      <div class="container">
         
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           
           <Cards/>
           
