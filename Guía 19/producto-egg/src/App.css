@@ -1,0 +1,18 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(253,202,60);
+    height: 70px;
+}
+
+.icon{
+width: 100px;
+height: 55px;
+}
+
+.footer{
+    height: 50px;
+    text-align: center;
+    border-top: 1px solid rgb(253,202,60);
+}

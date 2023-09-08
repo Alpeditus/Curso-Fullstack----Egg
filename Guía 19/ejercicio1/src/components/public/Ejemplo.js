@@ -1,4 +1,4 @@
-import React from 'react'
+ import React from 'react'
 
 export const Ejemplo = () => {
   return (
@@ -7,3 +7,4 @@ export const Ejemplo = () => {
     </div>
   )
 }
+re
